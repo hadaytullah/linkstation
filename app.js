@@ -28,7 +28,7 @@ let test1 = function (){
         output = 'No link station within reach for point '+device.location.x+','+device.location.y+'.';
     }
 
-        console.log(output);
+    console.log(output);
 
   })
 
