@@ -19,16 +19,16 @@ let test1 = function (){
     // locating nearby link station for the devices
     devices.forEach( function (device){
 
-    let linkStationProfile = stationLocator.findNearbyStation(linkStations, device);
+        let linkStationProfile = stationLocator.findNearbyStation(linkStations, device);
 
-    let output = null;
-    if (linkStationProfile){
-        output = 'Best link station for point '+device.location.x+','+device.location.y+' is '+linkStationProfile.linkStation.location.x+','+linkStationProfile.linkStation.location.y+' with power '+Math.round(linkStationProfile.power*1000)/1000+'.';
-    }else{
-        output = 'No link station within reach for point '+device.location.x+','+device.location.y+'.';
-    }
+        let output = null;
+        if (linkStationProfile){
+            output = 'Best link station for point '+device.location.x+','+device.location.y+' is '+linkStationProfile.linkStation.location.x+','+linkStationProfile.linkStation.location.y+' with power '+Math.round(linkStationProfile.power*1000)/1000+'.';
+        }else{
+            output = 'No link station within reach for point '+device.location.x+','+device.location.y+'.';
+        }
 
-    console.log(output);
+        console.log(output);
 
   })
 
